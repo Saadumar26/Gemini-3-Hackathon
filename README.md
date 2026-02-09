@@ -102,10 +102,11 @@ npm run preview
 
 ---
 
-If you'd like, I can also:
+## Team Members
 
-- Add a small demo GIF or screenshots to the README.
-- Create a `.env.example` file and a short CONTRIBUTING.md.
-- Commit the changes and open a release branch for submission.
+- **Project Manager:** Muhammad Fiaz
+- **Full Stack Developer:** Abdul Rehman
+- **AI / ML Engineer:** Muhammad Saad Umar
+- **Pitch / Demo Lead:** Umme Rubab
 
 
