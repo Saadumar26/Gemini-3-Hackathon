@@ -95,10 +95,6 @@ npm run preview
 - Ensure `GEMINI_API_KEY` is set before demonstration.
 - The app uses the `@google/genai` integration in [services/gemini.ts](services/gemini.ts).
 
-## 🙋‍♀️ Contributing
-
-- Pull requests are welcome. For hacks or improvements, create a feature branch and open a PR.
-
 ## 🧾 Credits & License
 
 - Author: Hackathon team
