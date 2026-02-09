@@ -1,14 +1,14 @@
 Thumbnail conversion instructions
 
 Files created:
-- `thumbnail.svg` (1200x800, 3:2 aspect ratio)
+- `thumbnail.svg` (1200x600, 2:1 aspect ratio)
 
 Recommended conversions to JPG/PNG (local):
 
 1) Using ImageMagick (most systems):
 
 ```bash
-# Convert to high-quality JPG (800 KB - 2 MB depending on content)
+# Convert to high-quality JPG (control quality to keep ≤5MB)
 magick convert thumbnail.svg -background white -flatten -quality 90 thumbnail.jpg
 
 # Convert to PNG
@@ -19,7 +19,7 @@ magick convert thumbnail.svg -background transparent -flatten thumbnail.png
 
 ```bash
 # Install on macOS: brew install librsvg
-rsvg-convert -w 1200 -h 800 thumbnail.svg -o thumbnail.png
+rsvg-convert -w 1200 -h 600 thumbnail.svg -o thumbnail.png
 # Convert PNG → JPG if needed
 magick convert thumbnail.png -quality 90 thumbnail.jpg
 ```
@@ -35,7 +35,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const svg = fs.readFileSync('thumbnail.svg');
 sharp(svg)
-  .resize(1200, 800)
+  .resize(1200, 600)
   .jpeg({ quality: 90 })
   .toFile('thumbnail.jpg')
   .then(() => console.log('thumbnail.jpg created'))
