@@ -31,11 +31,11 @@ ScholarAI is an interactive AI research assistant designed to help researchers a
 
 ## 🚀 Features
 
-- **📝 Structured Summaries** — Generate comprehensive analysis including problem statements, methodologies, contributions, and limitations
-- **🔍 Research Gap Analysis** — Identify methodological, data, evaluation, and application gaps
-- **🔮 Future Predictions** — Forecast potential research directions based on paper content
-- **💬 Interactive Chat** — Ask questions grounded in the paper with contextual explanations
-- **🗺️ Learning Roadmap** — Get prerequisite concepts and recommended papers to understand the research
+- ** Structured Summaries** — Generate comprehensive analysis including problem statements, methodologies, contributions, and limitations
+- ** Research Gap Analysis** — Identify methodological, data, evaluation, and application gaps
+- ** Future Predictions** — Forecast potential research directions based on paper content
+- ** Interactive Chat** — Ask questions grounded in the paper with contextual explanations
+- ** Learning Roadmap** — Get prerequisite concepts and recommended papers to understand the research
 
 ## 🛠️ Tech Stack
 
