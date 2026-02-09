@@ -1,0 +1,5 @@
+{
+  "name": "ScholarAI - Academic Research Assistant",
+  "description": "A specialized AI research assistant for analyzing academic papers, identifying research gaps, and predicting future trajectories using Gemini 3.",
+  "requestFramePermissions": []
+}
