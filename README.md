@@ -1,111 +1,122 @@
 <div align="center">
-  <h1>📚 ScholarAI — Academic Research Assistant</h1>
-  <p>An AI-powered assistant for analyzing academic papers, identifying research gaps, and generating learning roadmaps.</p>
+  <h1>📚 ScholarAI</h1>
+  <p>AI-powered assistant for analyzing academic papers, identifying research gaps, and generating learning roadmaps</p>
+  
+  <img src="thumbnail.svg" alt="ScholarAI" width="900" />
+  
+  <p>
+    <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react" />
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript" />
+    <img alt="Gemini API" src="https://img.shields.io/badge/Google_AI-Gemini-orange?logo=google" />
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow" />
+  </p>
 </div>
-
-<!-- Badges: tech stack, API, license, hackathon, status -->
-<!-- Project thumbnail -->
-<p align="center">
-  <img src="thumbnail.svg" alt="ScholarAI thumbnail" width="900" height="450" />
-</p>
-<p align="center">
-  <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript" />
-  <img alt="Vite" src="https://img.shields.io/badge/Vite-6.2-brightgreen?logo=vite" />
-  <img alt="Node" src="https://img.shields.io/badge/Node.js-LTS-green?logo=node.js" />
-  <img alt="Google AI - Gemini" src="https://img.shields.io/badge/Google_AI-Gemini-orange?logo=google" />
-  <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow" />
-  <img alt="Hackathon" src="https://img.shields.io/badge/Hackathon-Gemini--3--Hackathon-red" />
-  <img alt="Status" src="https://img.shields.io/badge/Status-Active-success" />
-</p>
 
 ---
 
-**Repository:** ScholarAI — Gemini 3 Hackathon submission
+## 📖 Overview
 
-## 🚀 Overview
+ScholarAI is an interactive AI research assistant designed to help researchers and students analyze academic papers more effectively. By leveraging Google's Gemini API, it provides intelligent paper analysis, identifies research opportunities, and creates personalized learning pathways.
 
-- **Purpose:** Provide researchers an interactive assistant that ingests a paper and produces structured summaries, research-gap analysis, predictions, a reader interface, and roadmap suggestions.
-- **Built with:** React, Vite, Tailwind, and the Gemini API.
+**What it does:**
+- Ingests academic papers (PDF, text, or arXiv links)
+- Generates comprehensive structured analyses
+- Identifies unexplored research directions
+- Provides document-grounded Q&A capabilities
+- Creates step-by-step learning roadmaps with prerequisite concepts
 
-## ✨ Key Features
+**Built for:** Researchers, PhD students, academics, and anyone exploring scientific literature who wants to understand papers faster and discover research opportunities.
 
-- **Structured Summaries:** Generate problem statements, method overviews, contributions, and limitations.
-- **Research Gaps:** Extract methodological, data, evaluation, and application gaps.
-- **Predictions:** Forecast plausible research directions based strictly on paper content.
-- **Reader & Chat Interface:** Ask questions grounded in the paper text; explain selections.
-- **Learning Roadmap:** Produce prerequisite concepts and recommended arXiv papers to reach the target paper.
+---
 
-## 🗂️ Project Structure
+## 🚀 Features
 
-- **App entry:** [index.tsx](index.tsx)
-- **Main UI:** [App.tsx](App.tsx)
-- **Components:** [components/](components) — AnalysisView, ChatInterface, PaperInput, ReaderView, RoadmapView, Sidebar, GenealogyView
-- **Services:** [services/gemini.ts](services/gemini.ts) — Gemini API integration
-- **Config & types:** [constants.ts](constants.ts), [types.ts](types.ts)
+- **📝 Structured Summaries** — Generate comprehensive analysis including problem statements, methodologies, contributions, and limitations
+- **🔍 Research Gap Analysis** — Identify methodological, data, evaluation, and application gaps
+- **🔮 Future Predictions** — Forecast potential research directions based on paper content
+- **💬 Interactive Chat** — Ask questions grounded in the paper with contextual explanations
+- **🗺️ Learning Roadmap** — Get prerequisite concepts and recommended papers to understand the research
 
-## ⚙️ Prerequisites
+## 🛠️ Tech Stack
 
-- Node.js (v16+ recommended)
-- A Gemini API key (set as `GEMINI_API_KEY`)
+- **Frontend:** React 18, TypeScript, Tailwind CSS
+- **Build Tool:** Vite
+- **AI Integration:** Google Gemini API
+- **Runtime:** Node.js LTS
 
-## ▶️ Run Locally
+## ⚡ Quick Start
 
-1. Install dependencies:
+### Prerequisites
+- Node.js (v16+)
+- Gemini API key
 
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Saadumar26/Gemini-3-Hackathon.git
+cd Gemini-3-Hackathon
+```
+
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-2. Create a `.env.local` in the project root and add your Gemini key:
-
+3. **Configure environment**
+Create `.env.local` in the project root:
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
-3. Start the development server:
-
+4. **Run development server**
 ```bash
 npm run dev
 ```
 
-The app will be available at `http://localhost:3000` (or the port shown in the terminal).
+5. **Open your browser**
+Navigate to `http://localhost:3000`
 
-## 🧪 Build & Preview
-
+### Build for Production
 ```bash
 npm run build
 npm run preview
 ```
 
-## 🔐 Environment & Security Notes
+## 📖 How to Use
 
-- Do not commit keys to source control. Use environment files or secrets management.
-- Rate limits and cost: be mindful of Gemini API usage during demos.
+1. **Upload/Search Paper** — Paste or search for an academic paper
+2. **Choose Mode** — Select from Summary, Gaps, Predictions, Reader, Chat, or Roadmap
+3. **Interact** — Generate analyses and ask questions about the paper
 
-## 🧭 How to Use (Quick)
+## 📁 Project Structure
 
-1. Open the app and paste or search for a paper via the input.
-2. Use the sidebar to switch modes: Summary, Gaps, Predictions, Reader, Chat, Roadmap.
-3. Generate analyses and interact with the paper using the chat or reader annotations.
+```
+├── components/          # UI components
+├── services/           # Gemini API integration
+├── App.tsx            # Main application
+├── index.tsx          # Entry point
+├── constants.ts       # Configuration
+└── types.ts           # TypeScript definitions
+```
 
-## 📁 Submission Notes (Gemini 3 Hackathon)
+## 👥 Team
 
-- This repository is prepared for the Gemini 3 Hackathon.
-- Ensure `GEMINI_API_KEY` is set before demonstration.
-- The app uses the `@google/genai` integration in [services/gemini.ts](services/gemini.ts).
+- **Muhammad Fiaz** — Project Manager
+- **Abdul Rehman** — Full Stack Developer
+- **Muhammad Saad Umar** — AI/ML Engineer
+- **Umme Rubab** — Pitch/Demo Lead
 
-## 🧾 Credits & License
+## 📄 License
 
-- Author: Hackathon team
-- License: MIT — see LICENSE
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🎯 Hackathon
 
-## Team Members
+Built for **Gemini 3 Hackathon**
 
-- **Project Manager:** Muhammad Fiaz
-- **Full Stack Developer:** Abdul Rehman
-- **AI / ML Engineer:** Muhammad Saad Umar
-- **Pitch / Demo Lead:** Umme Rubab
+---
 
-
+<div align="center">
+  Made with ❤️ by the ScholarAI Team
+</div>
