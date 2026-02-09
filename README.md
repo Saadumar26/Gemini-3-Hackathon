@@ -98,9 +98,8 @@ npm run preview
 ## 🧾 Credits & License
 
 - Author: Hackathon team
-- License: MIT — see LICENSE (add if desired)
+- License: MIT — see LICENSE
 
----
 
 ## Team Members
 
