@@ -3,6 +3,18 @@
   <p>An AI-powered assistant for analyzing academic papers, identifying research gaps, and generating learning roadmaps.</p>
 </div>
 
+<!-- Badges: tech stack, API, license, hackathon, status -->
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-6.2-brightgreen?logo=vite" />
+  <img alt="Node" src="https://img.shields.io/badge/Node.js-LTS-green?logo=node.js" />
+  <img alt="Google AI - Gemini" src="https://img.shields.io/badge/Google_AI-Gemini-orange?logo=google" />
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow" />
+  <img alt="Hackathon" src="https://img.shields.io/badge/Hackathon-Gemini--3--Hackathon-red" />
+  <img alt="Status" src="https://img.shields.io/badge/Status-Active-success" />
+</p>
+
 ---
 
 **Repository:** ScholarAI — Gemini 3 Hackathon submission
@@ -90,16 +102,10 @@ npm run preview
 
 ---
 
-## Team Members
+If you'd like, I can also:
 
-- **Project Manager:** Muhammad Fiaz
-- **Full Stack Developer:** Abdul Rehman
-- **AI / ML Engineer:** Muhammad Saad Umar
-- **Pitch / Demo Lead:** Umme Rubab
-
-
-<div align="center">
-
-</div>
+- Add a small demo GIF or screenshots to the README.
+- Create a `.env.example` file and a short CONTRIBUTING.md.
+- Commit the changes and open a release branch for submission.
 
 
