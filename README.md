@@ -41,10 +41,12 @@ ScholarAI is an interactive AI research assistant designed to help researchers a
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React 18, TypeScript, Tailwind CSS
-- **Build Tool:** Vite
-- **AI Integration:** Google Gemini API
-- **Runtime:** Node.js LTS
+| Component | Technology |
+|-----------|------------|
+| **Frontend** | React 18, TypeScript, Tailwind CSS |
+| **Build Tool** | Vite |
+| **AI Integration** | Google Gemini API |
+| **Runtime** | Node.js LTS |
 
 ## ⚡ Quick Start
 
