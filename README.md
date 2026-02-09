@@ -27,6 +27,8 @@ ScholarAI is an interactive AI research assistant designed to help researchers a
 
 **Built for:** Researchers, PhD students, academics, and anyone exploring scientific literature who wants to understand papers faster and discover research opportunities.
 
+**🌐 [Try Live Demo](https://aistudio.google.com/apps/drive/1Y4XXnhx5rj725aRxljccrz_x5bGAMZ5p?fullscreenApplet=true&showPreview=true&showAssistant=true)**
+
 ---
 
 ## 🚀 Features
