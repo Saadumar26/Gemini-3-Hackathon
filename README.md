@@ -6,7 +6,7 @@
 <!-- Badges: tech stack, API, license, hackathon, status -->
 <!-- Project thumbnail -->
 <p align="center">
-  <img src="thumbnail.svg" alt="ScholarAI thumbnail" width="900" />
+  <img src="thumbnail.svg" alt="ScholarAI thumbnail" width="900" height="450" />
 </p>
 <p align="center">
   <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react" />
