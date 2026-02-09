@@ -4,6 +4,10 @@
 </div>
 
 <!-- Badges: tech stack, API, license, hackathon, status -->
+<!-- Project thumbnail -->
+<p align="center">
+  <img src="thumbnail.svg" alt="ScholarAI thumbnail" width="900" />
+</p>
 <p align="center">
   <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript" />
