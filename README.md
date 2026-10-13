@@ -109,7 +109,7 @@ npm run preview
 - **Muhammad Fiaz** — Project Manager
 - **Abdul Rehman** — Full Stack Developer
 - **Muhammad Saad Umar** — AI/ML Engineer
-- **Umme Rubab** — Pitch/Demo Lead
+- **Umm E Rubab** — Pitch/Demo Lead
 
 ## 📄 License
 
