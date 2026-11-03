@@ -6,8 +6,8 @@ import { Message, RoadmapResponse } from "../types";
 // Initialize Gemini Client
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
 
-// Using Flash model for higher rate limits and faster response times while maintaining research quality
-const MODEL_NAME = 'gemini-3-flash-preview';
+// Use a stable, widely available Gemini Flash model instead of a preview model that can hit rate limits faster.
+const MODEL_NAME = 'gemini-2.5-flash';
 
 /**
  * Utility to wait for a specified duration.

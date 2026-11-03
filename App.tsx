@@ -37,14 +37,14 @@ export default function App() {
     setError(undefined);
   };
 
-  const handleSearch = async (query: string) => {
+  const handleSearch = async (query: string): Promise<string | null> => {
     setLoading(true);
     setError(undefined);
     try {
       return await searchForPaper(query);
     } catch (e: any) {
       setError(e.message || "Search failed.");
-      throw e;
+      return null;
     } finally {
       setLoading(false);
     }
@@ -128,6 +128,7 @@ export default function App() {
           onPaperLoaded={handlePaperLoaded} 
           isLoading={loading} 
           onSearch={handleSearch} 
+          error={error}
         />
       </div>
     );

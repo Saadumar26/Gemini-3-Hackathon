@@ -5,10 +5,11 @@ import { DEMO_PAPER_TEXT } from '../constants';
 interface PaperInputProps {
   onPaperLoaded: (title: string, content: string, source: 'search' | 'upload' | 'demo') => void;
   isLoading: boolean;
-  onSearch: (query: string) => Promise<string>;
+  onSearch: (query: string) => Promise<string | null>;
+  error?: string;
 }
 
-export const PaperInput: React.FC<PaperInputProps> = ({ onPaperLoaded, isLoading, onSearch }) => {
+export const PaperInput: React.FC<PaperInputProps> = ({ onPaperLoaded, isLoading, onSearch, error }) => {
   const [activeTab, setActiveTab] = useState<'search' | 'paste'>('search');
   const [searchQuery, setSearchQuery] = useState('');
   const [pastedText, setPastedText] = useState('');
@@ -18,6 +19,7 @@ export const PaperInput: React.FC<PaperInputProps> = ({ onPaperLoaded, isLoading
     if (!searchQuery.trim()) return;
     
     const result = await onSearch(searchQuery);
+    if (result === null) return;
     // Heuristic to extract a title from the result or just use query
     onPaperLoaded(searchQuery, result, 'search');
   };
@@ -63,36 +65,44 @@ export const PaperInput: React.FC<PaperInputProps> = ({ onPaperLoaded, isLoading
 
         <div className="p-6">
           {activeTab === 'search' ? (
-            <form onSubmit={handleSearch} className="space-y-4">
-              <div>
-                <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-                  Topic or Title
-                </label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="e.g. 'FlashAttention mechanism' or 'arXiv:1706.03762'"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 pl-10 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all"
-                  />
-                  <Search className="absolute left-3 top-3.5 text-slate-500" size={18} />
+            <>
+              <form onSubmit={handleSearch} className="space-y-4">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                    Topic or Title
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="e.g. 'FlashAttention mechanism' or 'arXiv:1706.03762'"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 pl-10 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all"
+                    />
+                    <Search className="absolute left-3 top-3.5 text-slate-500" size={18} />
+                  </div>
                 </div>
-              </div>
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-sky-600 hover:bg-sky-500 disabled:bg-slate-700 disabled:text-slate-500 text-white font-medium py-3 rounded-xl transition-all shadow-lg shadow-sky-900/20 flex items-center justify-center gap-2"
-              >
-                {isLoading ? (
-                  <span className="animate-pulse">Searching...</span>
-                ) : (
-                  <>
-                    <Sparkles size={18} /> Analyze
-                  </>
-                )}
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="w-full bg-sky-600 hover:bg-sky-500 disabled:bg-slate-700 disabled:text-slate-500 text-white font-medium py-3 rounded-xl transition-all shadow-lg shadow-sky-900/20 flex items-center justify-center gap-2"
+                >
+                  {isLoading ? (
+                    <span className="animate-pulse">Searching...</span>
+                  ) : (
+                    <>
+                      <Sparkles size={18} /> Analyze
+                    </>
+                  )}
+                </button>
+              </form>
+              {error && (
+                <div role="alert" className="mt-4 rounded-xl border border-red-900/50 bg-red-950/30 p-4 text-sm text-red-300">
+                  <p className="font-semibold">Search failed</p>
+                  <p className="mt-1 break-words">{error}</p>
+                </div>
+              )}
+            </>
           ) : (
             <div className="space-y-4">
                <div>
