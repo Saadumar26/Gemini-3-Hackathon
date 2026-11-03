@@ -5,7 +5,7 @@
   <img src="thumbnail.svg" alt="ScholarAI" width="900" />
   
   <p>
-    <img alt="React" src="https://img.shields.io/badge/React-18-blue?logo=react" />
+    <img alt="React" src="https://img.shields.io/badge/React-19-blue?logo=react" />
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript" />
     <img alt="Gemini API" src="https://img.shields.io/badge/Google_AI-Gemini-orange?logo=google" />
     <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow" />
@@ -19,7 +19,8 @@
 ScholarAI is an interactive AI research assistant designed to help researchers and students analyze academic papers more effectively. By leveraging Google's Gemini API, it provides intelligent paper analysis, identifies research opportunities, and creates personalized learning pathways.
 
 **What it does:**
-- Ingests academic papers (PDF, text, or arXiv links)
+- Accepts pasted paper text, a paper/topic search, or a built-in demo paper
+- Uses Gemini with Google Search grounding for searches; it does not directly download or parse PDF files
 - Generates comprehensive structured analyses
 - Identifies unexplored research directions
 - Provides document-grounded Q&A capabilities
@@ -37,13 +38,13 @@ ScholarAI is an interactive AI research assistant designed to help researchers a
 - **Research Gap Analysis** — Identify methodological, data, evaluation, and application gaps
 - **Future Predictions** — Forecast potential research directions based on paper content
 - **Interactive Chat** — Ask questions grounded in the paper with contextual explanations
-- **Learning Roadmap** — Get prerequisite concepts and recommended papers to understand the research
+- **Learning Roadmap** — Get prerequisite concepts and recommended papers to understand the research. The app does not currently extract an arXiv ID from the search or pasted text, so the target paper's arXiv link may be unavailable or incorrect.
 
 ## 🛠️ Tech Stack
 
 | Component | Technology |
 |-----------|------------|
-| **Frontend** | React 18, TypeScript, Tailwind CSS |
+| **Frontend** | React 19, TypeScript, Tailwind CSS |
 | **Build Tool** | Vite |
 | **AI Integration** | Google Gemini API |
 | **Runtime** | Node.js LTS |
@@ -51,7 +52,7 @@ ScholarAI is an interactive AI research assistant designed to help researchers a
 ## ⚡ Quick Start
 
 ### Prerequisites
-- Node.js (v16+)
+- Node.js (v18 or newer)
 - Gemini API key
 
 ### Installation
@@ -72,6 +73,7 @@ Create `.env.local` in the project root:
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
+Keep this key private. In the current Vite setup it is included in the browser app, so do not deploy this configuration publicly or commit the key.
 
 4. **Run development server**
 ```bash
@@ -89,7 +91,7 @@ npm run preview
 
 ## 📖 How to Use
 
-1. **Upload/Search Paper** — Paste or search for an academic paper
+1. **Load Paper** — Search for a paper/topic, paste paper text, or try the built-in demo. Search returns Gemini-generated paper content grounded with Google Search; it does not fetch the original PDF. PDF upload is not currently supported.
 2. **Choose Mode** — Select from Summary, Gaps, Predictions, Reader, Chat, or Roadmap
 3. **Interact** — Generate analyses and ask questions about the paper
 
